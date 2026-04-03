@@ -30,12 +30,14 @@
         "PEXELS_API_KEY": "${PEXELS_API_KEY}"
       }
     },
-    "Replicate": {
-      "command": "npx",
-      "args": ["-y", "mcp-remote", "https://mcp.replicate.com/sse"],
-      "env": {
-        "REPLICATE_API_TOKEN": "${REPLICATE_API_TOKEN}"
-      }
+    "GoogleStitch": {
+      "_comment": "Stitch MCP for UI mockup scene generation — wire when SDK available",
+      "_stitch_api_key": "${STITCH_API_KEY}"
+    },
+    "VertexAI": {
+      "_comment": "DELTA: Nano Banana Pro + Veo 3.1 via Google Cloud — replaces Replicate",
+      "_project": "zonewise-ai",
+      "_gemini_key": "${GEMINI_API_KEY}"
     }
   }
 }

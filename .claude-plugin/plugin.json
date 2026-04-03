@@ -1,7 +1,7 @@
 {
   "name": "zonewise-superpowers",
   "version": "3.0.0",
-  "description": "ZoneWise.AI Production Studio \u2014 Hollywood-grade video production for real estate auction intelligence. 5 AI agents, Google tools (Nano Banana Pro, Veo 3.1, Lyria 3, Stitch), 10 cinematic modules, Mapbox county animations. Fork of remotion-superpowers by Dojo Coding Labs.",
+  "description": "ZoneWise.AI Production Studio — Hollywood-grade video production for real estate auction intelligence. Fork of remotion-superpowers with Google AI tools (Nano Banana Pro, Veo 3.1, Lyria 3, Stitch), 5 AI agents, 10 cinematic modules, Mapbox county animations.",
   "author": {
     "name": "Everest Capital USA / BidDeed.AI",
     "url": "https://zonewise.ai"
@@ -17,25 +17,19 @@
     "zonewise",
     "biddeed",
     "real-estate",
-    "foreclosure",
-    "tax-deed",
+    "auction",
     "nano-banana-pro",
     "veo",
-    "lyria",
     "google-stitch",
+    "lyria",
+    "elevenlabs",
     "mapbox",
     "three-js",
-    "react-three-fiber",
     "cinematic",
-    "motion-graphics",
-    "elevenlabs",
-    "tiktok",
-    "reels",
-    "shorts",
-    "county-spotlight",
+    "hollywood",
+    "production-studio",
     "ai-video",
-    "ai-image",
-    "3d",
-    "production-studio"
+    "county-spotlight",
+    "florida"
   ]
 }

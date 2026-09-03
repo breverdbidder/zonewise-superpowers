@@ -32,7 +32,15 @@ Report each as ✓ or ✗ with version.
 
 Check if the current directory has a `remotion.config.ts` or `remotion.config.js` file.
 
-**If YES:** Tell the user their Remotion project was detected.
+**If YES:** Tell the user their Remotion project was detected. Check whether
+`remotion.config.ts` calls `Config.setLicenseKey(...)` or whether render
+invocations pass `--license-key`. If neither is present, tell the user:
+"No Remotion license key declared. If your organization qualifies for the
+Free License (individuals and for-profit orgs up to 3 people), add
+`Config.setLicenseKey('free-license')` to `remotion.config.ts` (or pass
+`--license-key=free-license` per render) to declare eligibility — see
+https://www.remotion.dev/docs/licensing. Only use a real `rm_pub_...` key if
+you've purchased a Company License."
 
 **If NO:** Ask the user if they want to:
 - Create a new Remotion project here: `npx create-video@latest`

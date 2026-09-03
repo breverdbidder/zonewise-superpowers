@@ -21,7 +21,7 @@ ls out/ 2>/dev/null | grep -E '\.(mp4|webm|mov)$'
 
 If no rendered video exists, tell the user to render first:
 ```bash
-npx remotion render [CompositionId] out/video.mp4
+npx remotion render [CompositionId] out/video.mp4 --license-key=free-license
 ```
 
 ### 2. Index with TwelveLabs
@@ -104,7 +104,7 @@ Duration: [X]s | Resolution: [WxH]
 Ask the user if they want to apply the suggested fixes. If yes:
 1. Make the code changes
 2. Preview with `npm run dev`
-3. Re-render: `npx remotion render [CompositionId] out/video.mp4`
+3. Re-render: `npx remotion render [CompositionId] out/video.mp4 --license-key=free-license`
 4. Offer to run `/review-video` again to verify improvements
 
 ### 6. Iteration Loop

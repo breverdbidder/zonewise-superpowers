@@ -1,5 +1,16 @@
 # CI/CD Rendering — GitHub Actions for Remotion
 
+## Licensing (Free License declaration)
+
+Every render invocation below includes `--license-key=free-license`. This is
+Remotion's documented mechanism (https://www.remotion.dev/docs/licensing) for
+a Free-License-eligible operator (individuals and for-profit orgs up to 3
+people) to declare eligibility and send the usage-tracking event without a
+remotion.pro account or a paid Company License key. Do not replace this with
+a real `rm_pub_...` key unless a Company License has actually been purchased
+— see `docs/gtm/VIDEO_STACK.md` in `cli-anything-biddeed` for the eligibility
+ruling this project operates under.
+
 ## Overview
 
 Automate video rendering with GitHub Actions. Render on push, on PR, or manually via workflow dispatch. The rendered video is uploaded as a downloadable artifact.
@@ -41,7 +52,8 @@ jobs:
           npx remotion render ${{ github.event.inputs.composition }} \
             out/video.mp4 \
             --codec ${{ github.event.inputs.codec }} \
-            --crf 18
+            --crf 18 \
+            --license-key=free-license
 
       - name: Upload rendered video
         uses: actions/upload-artifact@v4
@@ -71,7 +83,7 @@ jobs:
         with:
           node-version: "20"
       - run: npm ci
-      - run: npx remotion render MyVideo out/video.mp4 --crf 22
+      - run: npx remotion render MyVideo out/video.mp4 --crf 22 --license-key=free-license
       - uses: actions/upload-artifact@v4
         with:
           name: pr-video-preview
@@ -98,7 +110,7 @@ strategy:
     composition: [MyVideo, Intro, Outro, Short]
 
 steps:
-  - run: npx remotion render ${{ matrix.composition }} out/${{ matrix.composition }}.mp4
+  - run: npx remotion render ${{ matrix.composition }} out/${{ matrix.composition }}.mp4 --license-key=free-license
   - uses: actions/upload-artifact@v4
     with:
       name: video-${{ matrix.composition }}
@@ -109,7 +121,7 @@ steps:
 
 ```yaml
 - name: Render thumbnail
-  run: npx remotion still MyVideo out/thumbnail.png --frame 0
+  run: npx remotion still MyVideo out/thumbnail.png --frame 0 --license-key=free-license
 - uses: actions/upload-artifact@v4
   with:
     name: thumbnail

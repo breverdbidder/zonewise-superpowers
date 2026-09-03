@@ -142,7 +142,7 @@ Captions are MANDATORY for shorts. Use the same workflow as `/add-captions`:
 npm run dev
 # Preview at 1080x1920 — check on mobile dimensions
 
-npx remotion render MyShort out/short.mp4 --codec h264 --crf 18
+npx remotion render MyShort out/short.mp4 --codec h264 --crf 18 --license-key=free-license
 ```
 
 ## Short-Form Best Practices

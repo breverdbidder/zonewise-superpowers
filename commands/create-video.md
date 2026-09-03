@@ -141,12 +141,12 @@ Ask for feedback and make adjustments:
 
 When the user is satisfied:
 ```bash
-npx remotion render [CompositionId] out/video.mp4
+npx remotion render [CompositionId] out/video.mp4 --license-key=free-license
 ```
 
 Or with quality settings:
 ```bash
-npx remotion render [CompositionId] out/video.mp4 --codec h264 --crf 18
+npx remotion render [CompositionId] out/video.mp4 --codec h264 --crf 18 --license-key=free-license
 ```
 
 ## Guidelines

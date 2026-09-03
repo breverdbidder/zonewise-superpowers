@@ -137,12 +137,12 @@ Make adjustments based on preview:
 ## Step 9: Render
 
 ```bash
-npx remotion render MyVideo out/video.mp4
+npx remotion render MyVideo out/video.mp4 --license-key=free-license
 ```
 
 Or with custom settings:
 ```bash
-npx remotion render MyVideo out/video.mp4 --codec h264 --crf 18
+npx remotion render MyVideo out/video.mp4 --codec h264 --crf 18 --license-key=free-license
 ```
 
 ## File Organization
